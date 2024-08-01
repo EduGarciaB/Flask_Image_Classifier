@@ -1,4 +1,4 @@
-from flask import Flask, request, redirect, url_for, render_template
+from flask import Flask, request, redirect, url_for, render_template, send_from_directory
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 import numpy as np
@@ -36,7 +36,7 @@ def upload():
         # Generar HTML para mostrar la imagen y el resultado
         img_tag = f'<img src="/uploads/{f.filename}" style="max-width: 300px;"><br>'
         result_html = f'<p>Prediction: {result}</p><br>'
-        retry_button = '<button onclick="window.location.reload();">Prueba de nuevo!!</button>'
+        retry_button = '<button onclick="window.location.reload();">Prueba de Nuevo</button>'
         return img_tag + result_html + retry_button
 
     return render_template('upload.html')
