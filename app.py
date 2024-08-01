@@ -10,7 +10,7 @@ import tensorflow as tf
 app = Flask(__name__)
 
 # Ruta al modelo
-MODEL_PATH = '/Users/luiseduardogarciablanco/Desktop/bootcamp/flask_image_classifier/best_model.h5'
+MODEL_PATH = 'best_model.h5'
 model = load_model(MODEL_PATH)
 
 def model_predict(file_path, model):
