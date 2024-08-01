@@ -3,3 +3,4 @@ tensorflow==2.14.1  # o la versión que estés usando
 numpy
 Pillow
 gunicorn
+Werkzeug==2.0.3
